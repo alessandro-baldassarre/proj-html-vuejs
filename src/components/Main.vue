@@ -12,6 +12,7 @@
         </div>
       </div>
     </section>
+
     <section class="intro">
       <div class="container px-5 h-100">
         <div class="row px-5 h-100">
@@ -43,6 +44,11 @@
                 placeholder="Your Name*"
                 class="input-form w-100 rounded"
               />
+              <img
+                class="position-absolute names-expand"
+                src="../assets/images/image.png"
+                alt="icon of names expand"
+              />
               <input
                 type="email"
                 placeholder="Email*"
@@ -58,8 +64,30 @@
                 placeholder="Location"
                 class="input-form w-100 rounded"
               />
-              <button class="my-btn text-uppercase text-white rounded-pill mb-2">request a callback</button>
+              <button
+                class="my-btn text-uppercase text-white rounded-pill mb-2"
+              >
+                request a callback
+              </button>
             </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="contact">
+      <div class="container px-5 h-100">
+        <div class="row px-5 h-100 align-items-center justify-content-between">
+          <div class="col-8 text-white contact-text">
+            <h1>Start Learning to Drive Today</h1>
+            <p>Give us a call to schedule your first driving lesson</p>
+          </div>
+          <div class="col-4 d-flex justify-content-end text-white contact-phone">
+            <span class="icon me-5"
+              ><font-awesome-icon icon="fa-solid fa-phone-flip" /></span>
+            <p class="m-0 me-4">
+              1-800-555-555
+            </p>
           </div>
         </div>
       </div>
@@ -114,36 +142,59 @@ main {
         font-weight: 400;
       }
     }
-  }
-  div.intro-form {
-    form {
-      border-radius: 12px;
-      padding: 3rem 2.5rem;
-      bottom:2.5rem;
-      z-index: 2;
-      background-color: white;
+    div.intro-form {
+      form {
+        border-radius: 12px;
+        padding: 3rem 2.5rem;
+        bottom: 2.5rem;
+        z-index: 2;
+        background-color: white;
 
-      h2 {
-        color: $mainColor;
-        font-weight: 600;
-        margin-bottom: 2rem;
-      }
-      p {
-        color: $lightGreyColor;
-        font-size: 1.04rem;
-        line-height: 2.1rem;
-        font-weight: 400;
-        margin-bottom: 2rem;
-      }
-      input.input-form {
-        border: 1px solid lightgray;
-        color: $lightGreyColor;
-        background-color: $lightGrayBg;
-        margin-bottom: 1.7rem;
-        padding:.85rem 0.7rem;
-        font-size: .85rem;
+        h2 {
+          color: $mainColor;
+          font-weight: 600;
+          margin-bottom: 2rem;
+        }
+        p {
+          color: $lightGreyColor;
+          font-size: 1.04rem;
+          line-height: 2.1rem;
+          font-weight: 400;
+          margin-bottom: 2rem;
+        }
+        input.input-form {
+          border: 1px solid lightgray;
+          color: $lightGreyColor;
+          background-color: $lightGrayBg;
+          margin-bottom: 1.7rem;
+          padding: 0.85rem 0.7rem;
+          font-size: 0.85rem;
+        }
+        img.names-expand {
+          top: 235px;
+          right: 50px;
+          cursor: pointer;
+        }
       }
     }
+  }
+  section.contact {
+    height: 240px;
+    background-image: url("../assets/images/horizontal-cta-background.jpg");
+    background-size: cover;
+    div.contact-text{
+      h1{
+        font-weight: 700;
+        font-size: 2.3;
+      }
+      p{
+        font-size: 1.3rem;
+        font-weight: 700;
+      }
+    }
+  }
+  div.contact-phone{
+    font-size: 1.9rem;
   }
 }
 </style>

@@ -17,8 +17,7 @@
             </div>
             <div class="top-banner-text d-flex" id="text-call-to-book">
               <span class="icon me-2"
-                ><font-awesome-icon icon="fa-solid fa-phone"
-              /></span>
+                ><font-awesome-icon icon="fa-solid fa-phone-flip" /></span>
               <p class="m-0">
                 Give us a call to book your tuition! 1-800-555-555
               </p>
@@ -44,7 +43,7 @@
               <a href="#">
                 <img
                   src="../assets/images/avada-drivers-logo-2x-300x58.png"
-                  alt=""
+                  alt="avada drivers logo"
               /></a>
             </div>
             <nav class="d-flex align-items-center h-100">
