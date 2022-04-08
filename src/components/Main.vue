@@ -1,5 +1,6 @@
 <template>
   <main>
+
     <section class="hero position-relative">
       <div class="container px-5 h-100">
         <div class="row px-5 h-100">
@@ -75,7 +76,7 @@
       </div>
     </section>
 
-    <section class="contact">
+    <section class="contact position-relative">
       <div class="container px-5 h-100">
         <div class="row px-5 h-100 align-items-center justify-content-between">
           <div class="col-8 text-white contact-text">
@@ -92,12 +93,28 @@
         </div>
       </div>
     </section>
+
+    <Courses />
+    <Instructros />
+    <Testimonials />
+
+
+
   </main>
 </template>
 
 <script>
+import Courses from './main/Courses.vue'
+import Instructros from './main/Instructors.vue'
+import Testimonials from './main/Testimonials.vue'
+
 export default {
   name: "IndexMain",
+  components: {
+    Courses,
+    Instructros,
+    Testimonials,
+  }
 };
 </script>
 
