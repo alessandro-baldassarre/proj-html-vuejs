@@ -15,4 +15,7 @@ export default {
 <style scoped lang="scss">
 @import "@/assets/scss/partials/_variables";
 @import "@/assets/scss/partials/_common";
+footer{
+  border: 1px solid red;
+}
 </style>

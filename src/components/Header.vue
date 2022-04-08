@@ -1,5 +1,5 @@
 <template>
-  <header>
+  <header class="position-absolute w-100">
     <div class="top-banner">
       <div class="container px-5 h-100">
         <div class="row px-5 h-100">
@@ -28,7 +28,7 @@
       </div>
     </div>
 
-    <div class="header-content position-absolute d-flex w-100">
+    <div class="header-content d-flex w-100">
       <div class="container px-5 h-100">
         <div class="row px-5 h-100">
           <div
@@ -41,24 +41,34 @@
             "
           >
             <div class="logo">
-              <img
-                src="../assets/images/avada-drivers-logo-2x-300x58.png"
-                alt=""
-              />
+              <a href="#">
+                <img
+                  src="../assets/images/avada-drivers-logo-2x-300x58.png"
+                  alt=""
+              /></a>
             </div>
             <nav class="d-flex align-items-center h-100">
               <div class="links h-100">
                 <ul class="links-list d-flex align-items-center h-100 m-0">
-                  <li v-for="(link, index) in headerNavLink" :key="index" class="text-uppercase py-2" :class="{'active' : link.active, 'new-link' : link.new }">
-                    {{link.name}}
-                    <span v-if="(link.new)" class="new rounded text-white mx-1 position-absolute"
+                  <li
+                    v-for="(link, index) in headerNavLink"
+                    :key="index"
+                    class="text-uppercase py-2"
+                    :class="{ active: link.active, 'new-link': link.new }"
+                  >
+                    {{ link.name }}
+                    <span
+                      v-if="link.new"
+                      class="new rounded text-white mx-1 position-absolute"
                       >new</span
                     >
                   </li>
                 </ul>
               </div>
               <div class="book-now">
-                <button class="my-btn text-uppercase text-white rounded-pill">book now</button>
+                <button class="my-btn text-uppercase text-white rounded-pill">
+                  book now
+                </button>
               </div>
             </nav>
           </div>
@@ -120,7 +130,8 @@ export default {
 <style scoped lang="scss">
 @import "@/assets/scss/partials/_variables";
 @import "@/assets/scss/partials/_common";
-header {
+header 
+{z-index: 2;
   div.top-banner {
     height: 45px;
     background-color: $bgLightDark;
@@ -130,9 +141,9 @@ header {
     }
   }
   div.header-content {
-    height: 116px;
+    height: 115px;
     background-color: rgba(73, 70, 70, 0.5);
-    z-index: 2;
+    
     div.logo {
       img {
         width: 82%;
