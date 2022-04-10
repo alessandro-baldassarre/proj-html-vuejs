@@ -80,7 +80,9 @@
         <div class="row px-5 h-100 align-items-center justify-content-between">
           <div class="col-8 text-white contact-text">
             <h1>Start Learning to Drive Today</h1>
-            <p class="text-white">Give us a call to schedule your first driving lesson</p>
+            <p class="text-white">
+              Give us a call to schedule your first driving lesson
+            </p>
           </div>
           <div
             class="col-4 d-flex justify-content-end text-white contact-phone"
@@ -103,29 +105,65 @@
         <div class="row px-5">
           <div class="col-12">
             <div class="latest-news-card shadow position-relative text-center">
-                <h1>Latest News</h1>
-                <div class="container">
-                  <div class="row">
-                    <div class="col-6 mb-5">
-                      <img src="../assets/images/blog-choosecar-700x441.jpg" alt="" class="img-fluid">
-                       <h5>What Car to Start With?</h5>
-                      <p class="date">February 7th, 2019 | <span class="comments">0 Comments</span></p>
-                      <p>Lorem ipsum dolor sit amet, consectetur adipiscing</p>
-                    </div>
-                    <div class="col-6 mb-5">
-                      <img src="../assets/images/blogpost-10and2-700x441.jpg" alt="" class="img-fluid">
-                      <h5>Avada Driving School Expanding</h5>
-                      <p class="date">February 7th, 2019 | <span class="comments">0 Comments</span></p>
-                      <p>Lorem ipsum dolor sit amet, consectetur adipiscing</p>
-                    </div>
-                    <div class="col-12">
-                      <button class="my-btn text-uppercase text-white rounded-pill mb-4">more form the blog</button>
-                    </div>
+              <h1>Latest News</h1>
+              <div class="container">
+                <div class="row">
+                  <div class="col-6 mb-5">
+                    <img
+                      src="../assets/images/blog-choosecar-700x441.jpg"
+                      alt=""
+                      class="img-fluid"
+                    />
+                    <h5>What Car to Start With?</h5>
+                    <p class="date">
+                      February 7th, 2019 |
+                      <span class="comments">0 Comments</span>
+                    </p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing</p>
+                  </div>
+                  <div class="col-6 mb-5">
+                    <img
+                      src="../assets/images/blogpost-10and2-700x441.jpg"
+                      alt=""
+                      class="img-fluid"
+                    />
+                    <h5>Avada Driving School Expanding</h5>
+                    <p class="date">
+                      February 7th, 2019 |
+                      <span class="comments">0 Comments</span>
+                    </p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing</p>
+                  </div>
+                  <div class="col-12">
+                    <button
+                      class="my-btn text-uppercase text-white rounded-pill mb-4"
+                    >
+                      more form the blog
+                    </button>
                   </div>
                 </div>
-                
+              </div>
             </div>
-            <img src="../assets/images/latestnews-bottom.png" alt="arrow down image" class="img-fluid position-relative">
+            <img
+              src="../assets/images/latestnews-bottom.png"
+              alt="arrow down image"
+              class="img-fluid position-relative"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="newsletter">
+      <div class="container">
+        <div class="row justify-content-center py-2">
+          <div class="col-6 text-center p-5">
+            <h1>Sign up to our Newsletter</h1>
+            <input type="text" class="w-100 newsletter rounded" />
+            <button class="my-btn text-uppercase text-white rounded-pill w-100 mb-4">
+              subscribe
+            </button>
+            <p>(We do not share your data with anybody, and only use it for its intended purpose)</p>
           </div>
         </div>
       </div>
@@ -243,44 +281,66 @@ main {
   div.contact-phone {
     font-size: 1.9rem;
   }
-  section.latest-news{
+  section.latest-news {
     height: 870px;
     background-image: url("../assets/images/latestnews-background.jpg");
     background-size: cover;
     background-position-y: center;
-    div.latest-news-card{
+    div.latest-news-card {
       background-color: white;
       border-top-left-radius: 12px;
       border-top-right-radius: 12px;
       border-top: 6px solid $secondaryColor;
       padding: 4.5rem 2.5rem 0 2.5rem;
       bottom: 2.5rem;
-       h1 {
+      h1 {
+        color: $greyTitlesColor;
+        font-weight: 700;
+        font-size: 2.3;
+        margin-bottom: 3.5rem;
+      }
+    }
+    img {
+      bottom: 2.5rem;
+      margin-bottom: 1rem;
+    }
+    h5 {
+      color: $mainColor;
+      margin-bottom: 0.2rem;
+      font-weight: 700;
+    }
+    p.date {
+      color: $lightGreyColor;
+      font-size: 0.75rem;
+      span.comments {
+        color: $mainColor;
+      }
+    }
+    p {
+      color: $lightGreyColor;
+    }
+  }
+
+  section.newsletter {
+    height: 380px;
+    background-image: url("../assets/images/newsletter_background.jpg");
+    background-size: cover;
+    background-position-x: center;
+    h1 {
       color: $greyTitlesColor;
       font-weight: 700;
-      font-size: 2.3;
+      font-size: 1.9rem;
       margin-bottom: 3.5rem;
     }
+    input.newsletter {
+      padding: 0.8rem;
+      border: 1px solid lightgray;
+      margin-bottom: 2rem;
     }
-  }
-  img{
-    bottom: 2.5rem;
-    margin-bottom: 1rem;
-  }
-  h5{
-    color: $mainColor;
-    margin-bottom: .2rem;
-    font-weight: 700;
-  }
-  p.date{
-    color: $lightGreyColor;
-    font-size: .75rem;
-    span.comments{
-      color: $mainColor;
+    p{
+      color: $lightGreyColor;
+      font-size: .8rem;
     }
-  }
-  p{
-    color: $lightGreyColor;
   }
 }
 </style>
