@@ -1,6 +1,5 @@
 <template>
   <main>
-
     <section class="hero position-relative">
       <div class="container px-5 h-100">
         <div class="row px-5 h-100">
@@ -81,14 +80,15 @@
         <div class="row px-5 h-100 align-items-center justify-content-between">
           <div class="col-8 text-white contact-text">
             <h1>Start Learning to Drive Today</h1>
-            <p>Give us a call to schedule your first driving lesson</p>
+            <p class="text-white">Give us a call to schedule your first driving lesson</p>
           </div>
-          <div class="col-4 d-flex justify-content-end text-white contact-phone">
+          <div
+            class="col-4 d-flex justify-content-end text-white contact-phone"
+          >
             <span class="icon me-5"
-              ><font-awesome-icon icon="fa-solid fa-phone-flip" /></span>
-            <p class="m-0 me-4">
-              1-800-555-555
-            </p>
+              ><font-awesome-icon icon="fa-solid fa-phone-flip"
+            /></span>
+            <p class="m-0 me-4 text-white">1-800-555-555</p>
           </div>
         </div>
       </div>
@@ -98,15 +98,45 @@
     <Instructros />
     <Testimonials />
 
-
-
+    <section class="latest-news">
+      <div class="container px-5">
+        <div class="row px-5">
+          <div class="col-12">
+            <div class="latest-news-card shadow position-relative text-center">
+                <h1>Latest News</h1>
+                <div class="container">
+                  <div class="row">
+                    <div class="col-6 mb-5">
+                      <img src="../assets/images/blog-choosecar-700x441.jpg" alt="" class="img-fluid">
+                       <h5>What Car to Start With?</h5>
+                      <p class="date">February 7th, 2019 | <span class="comments">0 Comments</span></p>
+                      <p>Lorem ipsum dolor sit amet, consectetur adipiscing</p>
+                    </div>
+                    <div class="col-6 mb-5">
+                      <img src="../assets/images/blogpost-10and2-700x441.jpg" alt="" class="img-fluid">
+                      <h5>Avada Driving School Expanding</h5>
+                      <p class="date">February 7th, 2019 | <span class="comments">0 Comments</span></p>
+                      <p>Lorem ipsum dolor sit amet, consectetur adipiscing</p>
+                    </div>
+                    <div class="col-12">
+                      <button class="my-btn text-uppercase text-white rounded-pill mb-4">more form the blog</button>
+                    </div>
+                  </div>
+                </div>
+                
+            </div>
+            <img src="../assets/images/latestnews-bottom.png" alt="arrow down image" class="img-fluid position-relative">
+          </div>
+        </div>
+      </div>
+    </section>
   </main>
 </template>
 
 <script>
-import Courses from './main/Courses.vue'
-import Instructros from './main/Instructors.vue'
-import Testimonials from './main/Testimonials.vue'
+import Courses from "./main/Courses.vue";
+import Instructros from "./main/Instructors.vue";
+import Testimonials from "./main/Testimonials.vue";
 
 export default {
   name: "IndexMain",
@@ -114,7 +144,7 @@ export default {
     Courses,
     Instructros,
     Testimonials,
-  }
+  },
 };
 </script>
 
@@ -199,19 +229,58 @@ main {
     height: 240px;
     background-image: url("../assets/images/horizontal-cta-background.jpg");
     background-size: cover;
-    div.contact-text{
-      h1{
+    div.contact-text {
+      h1 {
         font-weight: 700;
         font-size: 2.3;
       }
-      p{
+      p {
         font-size: 1.3rem;
         font-weight: 700;
       }
     }
   }
-  div.contact-phone{
+  div.contact-phone {
     font-size: 1.9rem;
+  }
+  section.latest-news{
+    height: 870px;
+    background-image: url("../assets/images/latestnews-background.jpg");
+    background-size: cover;
+    background-position-y: center;
+    div.latest-news-card{
+      background-color: white;
+      border-top-left-radius: 12px;
+      border-top-right-radius: 12px;
+      border-top: 6px solid $secondaryColor;
+      padding: 4.5rem 2.5rem 0 2.5rem;
+      bottom: 2.5rem;
+       h1 {
+      color: $greyTitlesColor;
+      font-weight: 700;
+      font-size: 2.3;
+      margin-bottom: 3.5rem;
+    }
+    }
+  }
+  img{
+    bottom: 2.5rem;
+    margin-bottom: 1rem;
+  }
+  h5{
+    color: $mainColor;
+    margin-bottom: .2rem;
+    font-weight: 700;
+  }
+  p.date{
+    color: $lightGreyColor;
+    font-size: .75rem;
+    span.comments{
+      color: $mainColor;
+    }
+  }
+  p{
+    color: $lightGreyColor;
   }
 }
 </style>

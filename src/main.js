@@ -2,10 +2,9 @@ import Vue from 'vue'
 import App from './App.vue'
 
 import { library } from '@fortawesome/fontawesome-svg-core'
-import { faCircleNotch, faPhoneFlip } from '@fortawesome/free-solid-svg-icons'
+import { faCircleNotch, faPhoneFlip} from '@fortawesome/free-solid-svg-icons'
 library.add(faPhoneFlip)
 library.add(faCircleNotch)
-
 
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 Vue.component('font-awesome-icon', FontAwesomeIcon)

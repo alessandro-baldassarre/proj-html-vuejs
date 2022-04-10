@@ -68,7 +68,8 @@
                 <div class="col-4">
                   <div class="statistics-card shadow position-relative">
                     <svg>
-                      <circle class="bg" cx="100" cy="100" r="95" />
+                      <circle class="bg-3" cx="100" cy="100" r="95" />
+                      <circle class="met-3" cx="100" cy="100" r="95" />
                     </svg>
                     <p class="position-absolute">0%</p>
                     <h5 class="text-uppercase">accident rate</h5>
@@ -111,7 +112,6 @@ export default {
 <style scoped lang="scss">
 @import "@/assets/scss/partials/_variables";
 @import "@/assets/scss/partials/_common";
-@import "~@fortawesome/fontawesome-free/css/all.css";
 
 section.courses {
   height: 520px;
@@ -181,16 +181,16 @@ section.statistics {
       color: rgb(147, 155, 163);
       font-weight: 600;
     }
-    p{
-      bottom:190px;
+    p {
+      bottom: 190px;
       left: 50%;
       transform: translateX(-50%);
       font-weight: 600;
       font-size: 2.6rem;
       color: rgb(147, 155, 163);
     }
-    .col-4{
-      padding: 0 .3rem;
+    .col-4 {
+      padding: 0 0.3rem;
     }
   }
   svg {
@@ -215,11 +215,46 @@ section.statistics {
     stroke-dasharray: 560;
     stroke-dashoffset: 0;
     stroke: $mainColor;
+    animation: progress-1 2s ease-out;
   }
   .meter-2 {
-    stroke-dasharray: 0;
+    stroke-dasharray: 720;
     stroke-dashoffset: 0;
     stroke: $mainColor;
+    animation: progress-1 2s ease-out;
   }
+  .bg-3 {
+    fill: none;
+    stroke-width: 10px;
+    stroke: $mainColor;
+  }
+  .met-3 {
+    fill: none;
+    stroke-width: 10px;
+    stroke-linecap: circle;
+    transform: rotate(-90deg);
+    transform-origin: 50% 50%;
+    stroke-dasharray: 590;
+    stroke-dashoffset: 0;
+    stroke: $lightGrayBg;
+  }
+  @keyframes progress-1 {
+    from {
+      stroke-dashoffset: 560;
+    }
+    to {
+      stroke-dashoffset: 0;
+    }
+  }
+
+  @keyframes progress-2 {
+    from {
+      stroke-dashoffset: 360;
+    }
+    to {
+      stroke-dashoffset: 0;
+    }
+  }
+
 }
 </style>
