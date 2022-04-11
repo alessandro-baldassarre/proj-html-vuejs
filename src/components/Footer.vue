@@ -1,5 +1,8 @@
 <template>
+  <!-- footer -->
   <footer>
+
+    <!-- footer main content -->
     <section class="main-content">
       <div class="container px-5">
         <div class="row px-5">
@@ -105,6 +108,7 @@
       </div>
     </section>
 
+    <!-- footer copyright and social -->
     <section class="copyright-social">
       <div class="container px-5 h-100">
         <div class="row px-5 h-100">
@@ -149,6 +153,8 @@ export default {
 @import "@/assets/scss/partials/_variables";
 @import "@/assets/scss/partials/_common";
 footer {
+
+    // MAIN CONTENT
   section.main-content {
     height: 450px;
     background-image: url("../assets/images/footer-background-color.jpg");
@@ -197,6 +203,7 @@ footer {
     }
   }
 
+  // COPYRIGHT SOCIAL
   section.copyright-social {
     height: 135px;
     background-color: rgb(28, 29, 30);

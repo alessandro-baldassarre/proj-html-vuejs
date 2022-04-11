@@ -4,6 +4,7 @@
       <div class="container px-5 h-100">
         <div class="row px-5 h-100">
           <div class="col-5 pe-5">
+            <!-- courses info box -->
             <div class="courses-box-info shadow position-relative text-center">
               <div class="new-corner-img position-absolute"></div>
               <h1 class="mb-5">Courses</h1>
@@ -20,6 +21,8 @@
           <div
             class="col-7 ms-0 d-flex h-100 py-5 px-0 justify-content-between"
           >
+            
+            <!-- single course info -->
             <div
               v-for="(course, index) in courses"
               :key="index"
@@ -38,6 +41,7 @@
       </div>
     </section>
 
+    <!-- statistics section -->
     <section class="statistics position-relative">
       <div class="container-fluid justify-content-center h-100">
         <div class="row h-100">
@@ -114,6 +118,7 @@ export default {
 @import "@/assets/scss/partials/_variables";
 @import "@/assets/scss/partials/_common";
 
+// COURSES
 section.courses {
   height: 520px;
   background-image: url("~/src/assets/images/promise-background.jpg");
@@ -128,6 +133,7 @@ section.courses {
     left: 0;
     border-top-left-radius: 12px;
   }
+  // box info
   div.courses-box-info {
     border-radius: 12px;
     padding: 3.5rem 2.5rem;
@@ -147,6 +153,7 @@ section.courses {
       margin-bottom: 2rem;
     }
   }
+  // single course
   div.course-name-info {
     h2 {
       color: $secondaryColor;
@@ -172,6 +179,7 @@ section.courses {
       }
 }
 
+// STATISTICS
 section.statistics {
   height: 520px;
   div.separator {

@@ -1,5 +1,8 @@
 <template>
+  <!-- header -->
   <header class="position-absolute w-100">
+
+    <!-- top banner -->
     <div class="top-banner">
       <div class="container px-5 h-100">
         <div class="row px-5 h-100">
@@ -12,6 +15,7 @@
               h-100
             "
           >
+            <!-- text top banner -->
             <div class="top-banner-text" id="pass-rate-text">
               <p class="m-0">We have a 95% Succesful Pass Rate!</p>
             </div>
@@ -27,6 +31,7 @@
       </div>
     </div>
 
+    <!-- main header content -->
     <div class="header-content d-flex w-100">
       <div class="container px-5 h-100">
         <div class="row px-5 h-100">
@@ -39,6 +44,7 @@
               h-100
             "
           >
+            <!-- logo  -->
             <div class="logo">
               <a href="#">
                 <img
@@ -46,6 +52,8 @@
                   alt="avada drivers logo"
               /></a>
             </div>
+
+            <!-- navigation links -->
             <nav class="d-flex align-items-center h-100">
               <div class="links h-100">
                 <ul class="links-list d-flex align-items-center h-100 m-0">

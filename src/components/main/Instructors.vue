@@ -3,6 +3,7 @@
     <section class="instructors">
       <div class="container px-5 h-100">
         <div class="row px-5">
+          <!-- instructors intro -->
           <div class="col-8 instructors-text">
             <h1>Your Instructors</h1>
             <p>
@@ -18,6 +19,7 @@
           </div>
         </div>
         <div class="row px-5 me-1">
+          <!-- single instructor card -->
           <div
             v-for="(instructor, index) in instructors"
             :key="index"
@@ -88,6 +90,8 @@ export default {
 
 section.instructors {
   height: 620px;
+
+  // INSTRUCTORS INTRO
   div.instructors-text {
     h1 {
       color: $greyTitlesColor;
@@ -103,6 +107,8 @@ section.instructors {
       margin-bottom: 5rem;
     }
   }
+
+  // SINGLE INSTRUCTOR CARD
   div.cards-wrapper {
     padding: 0 0.3rem;
     div.instructor-card {

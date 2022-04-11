@@ -1,5 +1,7 @@
 <template>
   <main>
+
+    <!-- hero section -->
     <section class="hero position-relative">
       <div class="container px-5 h-100">
         <div class="row px-5 h-100">
@@ -13,6 +15,7 @@
       </div>
     </section>
 
+    <!-- intro section -->
     <section class="intro">
       <div class="container px-5 h-100">
         <div class="row px-5 h-100">
@@ -32,6 +35,8 @@
               libero, at suscipit lacus. Sed vitae fringilla nibh.
             </p>
           </div>
+          
+          <!-- form -->
           <div class="col-6 h-100 px-3 text-center intro-form">
             <form class="shadow position-relative">
               <h2>First Lesson Free!</h2>
@@ -75,6 +80,7 @@
       </div>
     </section>
 
+    <!-- contact section -->
     <section class="contact position-relative">
       <div class="container px-5 h-100">
         <div class="row px-5 h-100 align-items-center justify-content-between">
@@ -96,10 +102,16 @@
       </div>
     </section>
 
+    <!-- courses section  -->
     <Courses />
+
+    <!-- instructors section -->
     <Instructros />
+
+    <!-- testimonials section -->
     <Testimonials />
 
+    <!-- latest news section -->
     <section class="latest-news">
       <div class="container px-5">
         <div class="row px-5">
@@ -116,7 +128,6 @@
                         class="img-fluid"
                       />
                     </div>
-
                     <h5>What Car to Start With?</h5>
                     <p class="date">
                       February 7th, 2019 |
@@ -132,7 +143,6 @@
                         class="img-fluid"
                       />
                     </div>
-
                     <h5>Avada Driving School Expanding</h5>
                     <p class="date">
                       February 7th, 2019 |
@@ -160,6 +170,7 @@
       </div>
     </section>
 
+    <!-- newsletter section -->
     <section class="newsletter">
       <div class="container">
         <div class="row justify-content-center py-2">
@@ -202,6 +213,7 @@ export default {
 @import "@/assets/scss/partials/_variables";
 @import "@/assets/scss/partials/_common";
 main {
+  // HERO
   section.hero {
     height: 615px;
     background-image: url("../assets/images/homepage-hero-background.jpg");
@@ -217,6 +229,8 @@ main {
       }
     }
   }
+
+  // INTRO
   section.intro {
     height: 675px;
     div.intro-text {
@@ -238,6 +252,7 @@ main {
         font-weight: 400;
       }
     }
+    // form
     div.intro-form {
       form {
         border-radius: 12px;
@@ -274,6 +289,8 @@ main {
       }
     }
   }
+
+  // CONTACT
   section.contact {
     height: 240px;
     background-image: url("../assets/images/horizontal-cta-background.jpg");
@@ -292,6 +309,8 @@ main {
   div.contact-phone {
     font-size: 1.9rem;
   }
+
+  // LATEST NEWS
   section.latest-news {
     height: 870px;
     background-image: url("../assets/images/latestnews-background.jpg");
@@ -345,6 +364,7 @@ main {
     }
   }
 
+  // NEWSLETTER
   section.newsletter {
     height: 380px;
     background-image: url("../assets/images/newsletter_background.jpg");
