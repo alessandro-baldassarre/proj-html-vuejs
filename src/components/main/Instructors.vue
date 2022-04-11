@@ -5,22 +5,22 @@
         <div class="row px-5">
           <!-- instructors intro -->
           <div class="col-8 instructors-text">
-            <h1>Your Instructors</h1>
-            <p>
+            <h1 v-scrollanimation>Your Instructors</h1>
+            <p v-scrollanimation>
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc
               ultrices auctor sapien id cursus. Aliquam maximus turpis in
               vehicula semper.
             </p>
           </div>
-          <div class="col-4 instructors-cta pt-5 mt-4 px-4">
-            <button class="my-btn text-uppercase text-white rounded-pill w-100">
+          <div v-scrollanimation class="col-4 instructors-cta pt-5 mt-4 px-4">
+            <button v-scrollanimation class="my-btn text-uppercase text-white rounded-pill w-100">
               more about us
             </button>
           </div>
         </div>
         <div class="row px-5 me-1">
           <!-- single instructor card -->
-          <div
+          <div v-scrollanimation
             v-for="(instructor, index) in instructors"
             :key="index"
             class="col-4 cards-wrapper"
@@ -106,7 +106,26 @@ section.instructors {
       font-weight: 500;
       margin-bottom: 5rem;
     }
+      .before-enter {
+        opacity: 0;
+        transform: translateX(-100px);
+        transition: all 1.5s ease-out;
+      }
+      .enter {
+        opacity: 1;
+        transform: translateX(0px);
+      }
+    
   }
+  .before-enter {
+        opacity: 0;
+        transform: translateY(100px);
+        transition: all 1.5s ease-out;
+      }
+      .enter {
+        opacity: 1;
+        transform: translateY(0px);
+      }
 
   // SINGLE INSTRUCTOR CARD
   div.cards-wrapper {

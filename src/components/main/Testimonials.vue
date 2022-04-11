@@ -5,12 +5,12 @@
       <div class="container p-5">
         <div class="row pt-5 pb-4">
           <div class="col 12 text-center pt-5 title">
-            <h1>Testimonials</h1>
-            <p>Here's what our happy drivers had to say about our services:</p>
+            <h1 v-scrollanimation>Testimonials</h1>
+            <p v-scrollanimation>Here's what our happy drivers had to say about our services:</p>
           </div>
         </div>
         <!-- testimonial -->
-        <div
+        <div v-scrollanimation
           v-for="(testimonial, index) in testimonials"
           :key="index"
           class="row"
@@ -137,6 +137,15 @@ section.testimonials {
       font-weight: 500;
       margin-bottom: 1.5rem;
     }
+      .before-enter {
+        opacity: 0;
+        transform: translateX(-100px);
+        transition: all 1.5s ease-out;
+      }
+      .enter {
+        opacity: 1;
+        transform: translateX(0px);
+      }
   }
   div.testimonials-card {
     margin: 0 auto;
@@ -157,7 +166,17 @@ section.testimonials {
       font-weight: 700;
       margin-bottom: 2rem;
     }
+      
   }
+  .before-enter {
+        opacity: 0;
+        transform: translateY(50px);
+        transition: all 1.5s ease-out;
+      }
+      .enter {
+        opacity: 1;
+        transform: translateY(0px);
+      }
   div.dots-slide {
     i {
       margin-right: 0.5rem;

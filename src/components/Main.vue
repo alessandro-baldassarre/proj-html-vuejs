@@ -1,14 +1,15 @@
 <template>
   <main>
-
     <!-- hero section -->
     <section class="hero position-relative">
       <div class="container px-5 h-100">
         <div class="row px-5 h-100">
           <div class="col-12 h-100 d-flex align-items-center">
             <div class="hero-text text-white">
-              <h1>Drive with Avada</h1>
-              <p>We offer the finest driving tuition money can buy</p>
+              <h1 v-scrollanimation>Drive with Avada</h1>
+              <p v-scrollanimation>
+                We offer the finest driving tuition money can buy
+              </p>
             </div>
           </div>
         </div>
@@ -20,13 +21,13 @@
       <div class="container px-5 h-100">
         <div class="row px-5 h-100">
           <div class="col-6 h-100 pt-4 intro-text">
-            <h1 class="my-5">Get Behind The Wheel</h1>
-            <h5>
+            <h1 v-scrollanimation class="my-5">Get Behind The Wheel</h1>
+            <h5 v-scrollanimation>
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc
               ultrices auctor sapien id cursus. Aliquam maximus turpis in
               vehicula semper.
             </h5>
-            <p>
+            <p v-scrollanimation>
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc
               ultrices auctor sapien id cursus. Aliquam maximus turpis in
               vehicula semper. Fusce et ultrices libero, at suscipit lacus. Sed
@@ -35,10 +36,10 @@
               libero, at suscipit lacus. Sed vitae fringilla nibh.
             </p>
           </div>
-          
+
           <!-- form -->
           <div class="col-6 h-100 px-3 text-center intro-form">
-            <form class="shadow position-relative">
+            <form v-scrollanimation class="shadow position-relative">
               <h2>First Lesson Free!</h2>
               <p>
                 When you make a block booking with us your first lesson is
@@ -85,12 +86,13 @@
       <div class="container px-5 h-100">
         <div class="row px-5 h-100 align-items-center justify-content-between">
           <div class="col-8 text-white contact-text">
-            <h1>Start Learning to Drive Today</h1>
-            <p class="text-white">
+            <h1 v-scrollanimation>Start Learning to Drive Today</h1>
+            <p v-scrollanimation class="text-white">
               Give us a call to schedule your first driving lesson
             </p>
           </div>
           <div
+            v-scrollanimation
             class="col-4 d-flex justify-content-end text-white contact-phone"
           >
             <span class="icon me-5"
@@ -121,7 +123,7 @@
               <div class="container">
                 <div class="row">
                   <div class="col-6 mb-5">
-                    <div class="wrapper-img">
+                    <div v-scrollanimation class="wrapper-img">
                       <img
                         src="../assets/images/blog-choosecar-700x441.jpg"
                         alt=""
@@ -136,7 +138,7 @@
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing</p>
                   </div>
                   <div class="col-6 mb-5">
-                    <div class="wrapper-img">
+                    <div v-scrollanimation class="wrapper-img">
                       <img
                         src="../assets/images/blogpost-10and2-700x441.jpg"
                         alt=""
@@ -224,6 +226,15 @@ main {
         font-size: 3.5rem;
         font-weight: 700;
       }
+      .before-enter {
+        opacity: 0;
+        transform: translatex(-100px);
+        transition: all 1.5s ease-out;
+      }
+      .enter {
+        opacity: 1;
+        transform: translatex(0px);
+      }
       p {
         font-size: 1.5rem;
       }
@@ -238,6 +249,15 @@ main {
         color: $greyTitlesColor;
         font-weight: 700;
         font-size: 2.3;
+      }
+      .before-enter {
+        opacity: 0;
+        transform: translatex(-100px);
+        transition: all 1.5s ease-out;
+      }
+      .enter {
+        opacity: 1;
+        transform: translatex(0px);
       }
       h5 {
         color: $lightGreyColor;
@@ -254,6 +274,15 @@ main {
     }
     // form
     div.intro-form {
+      .before-enter {
+        opacity: 0;
+        transform: translateY(100px);
+        transition: all 1.5s ease-out;
+      }
+      .enter {
+        opacity: 1;
+        transform: translateY(0px);
+      }
       form {
         border-radius: 12px;
         padding: 3rem 2.5rem;
@@ -300,6 +329,15 @@ main {
         font-weight: 700;
         font-size: 2.3;
       }
+      .before-enter {
+        opacity: 0;
+        transform: translateX(-100px);
+        transition: all 1.5s ease-out;
+      }
+      .enter {
+        opacity: 1;
+        transform: translateX(0px);
+      }
       p {
         font-size: 1.3rem;
         font-weight: 700;
@@ -308,6 +346,15 @@ main {
   }
   div.contact-phone {
     font-size: 1.9rem;
+  }
+  .before-enter {
+    opacity: 0;
+    transform: translatex(100px);
+    transition: all 1.8s ease-out;
+  }
+  .enter {
+    opacity: 1;
+    transform: translatex(0px);
   }
 
   // LATEST NEWS
@@ -341,6 +388,15 @@ main {
             opacity: 0.9;
           }
         }
+      }
+      .before-enter {
+        opacity: 0;
+        transform: translateY(50px);
+        transition: all 1.8s ease-out;
+      }
+      .enter {
+        opacity: 1;
+        transform: translateY(0px);
       }
     }
     img {

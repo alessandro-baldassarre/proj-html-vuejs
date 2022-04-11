@@ -5,7 +5,7 @@
         <div class="row px-5 h-100">
           <div class="col-5 pe-5">
             <!-- courses info box -->
-            <div class="courses-box-info shadow position-relative text-center">
+            <div v-scrollanimation class="courses-box-info shadow position-relative text-center">
               <div class="new-corner-img position-absolute"></div>
               <h1 class="mb-5">Courses</h1>
               <p>
@@ -23,7 +23,7 @@
           >
             
             <!-- single course info -->
-            <div
+            <div v-scrollanimation
               v-for="(course, index) in courses"
               :key="index"
               class="course-name-info text-center py-4"
@@ -48,14 +48,14 @@
           <div class="col-12 d-flex justify-content-center">
             <div class="separator position-absolute"></div>
           </div>
-          <div class="col 12 wrapper-statistics-cards position-relative h-100">
+          <div v-scrollanimation class="col 12 wrapper-statistics-cards position-relative h-100">
             <div class="container px-5 h-100">
               <div class="row px-5 h100 text-center">
                 <div class="col-4">
                   <div class="statistics-card shadow position-relative">
                     <svg>
                       <circle class="bg" cx="100" cy="100" r="95" />
-                      <circle class="meter-1" cx="100" cy="100" r="95" />
+                      <circle v-scrollanimation class="meter-1" cx="100" cy="100" r="95" />
                     </svg>
                     <p class="position-absolute">95%</p>
                     <h5 class="text-uppercase">pass rate</h5>
@@ -65,7 +65,7 @@
                   <div class="statistics-card shadow position-relative">
                     <svg>
                       <circle class="bg" cx="100" cy="100" r="95" />
-                      <circle class="meter-2" cx="100" cy="100" r="95" />
+                      <circle v-scrollanimation class="meter-2" cx="100" cy="100" r="95" />
                     </svg>
                     <p class="position-absolute">100%</p>
                     <h5 class="text-uppercase">referral rate</h5>
@@ -153,6 +153,15 @@ section.courses {
       margin-bottom: 2rem;
     }
   }
+    .before-enter {
+        opacity: 0;
+        transform: translateY(50px);
+        transition: all 1.8s ease-out;
+      }
+      .enter {
+        opacity: 1;
+        transform: translateY(0px);
+      }
   // single course
   div.course-name-info {
     h2 {
@@ -175,8 +184,9 @@ section.courses {
             transform: scale(1.08);
             opacity: 0.9;
           }
-        }
+        } 
       }
+       
 }
 
 // STATISTICS
@@ -193,6 +203,7 @@ section.statistics {
   div.wrapper-statistics-cards {
     bottom: 1.5rem;
     z-index: 2;
+    
     div.statistics-card {
       background-color: white;
       border-radius: 12px;
@@ -220,6 +231,9 @@ section.statistics {
     height: 200px;
     margin: 0 auto;
     margin-bottom: 3rem;
+      .enter {
+        animation: progress-1 3.5s ease-out;
+      }
   }
   .bg {
     fill: none;
@@ -237,14 +251,14 @@ section.statistics {
     stroke-dasharray: 560;
     stroke-dashoffset: 0;
     stroke: $mainColor;
-    animation: progress-1 2s ease-out;
   }
   .meter-2 {
     stroke-dasharray: 720;
     stroke-dashoffset: 0;
     stroke: $mainColor;
-    animation: progress-1 2s ease-out;
+    
   }
+    
   
   @keyframes progress-1 {
     from {
