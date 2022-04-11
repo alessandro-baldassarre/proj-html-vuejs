@@ -110,6 +110,13 @@ section.instructors {
       border-radius: 12px;
       border-top: 6px solid $mainColor;
       padding: 2.5rem 2.5rem;
+      img{
+        transition: all ease-in-out .5s;
+        &:hover{
+          transform: scale(1.04);
+          box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+        }
+      }
     }
     h5 {
       color: $greyTitlesColor;

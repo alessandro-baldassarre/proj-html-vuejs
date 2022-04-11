@@ -25,7 +25,9 @@
               :key="index"
               class="course-name-info text-center py-4"
             >
+            <div class="wrapper-img">
               <img :src="course.imgUrl" alt="car image" class="mb-3" />
+            </div>
               <h2 class="mb-3">{{ course.name }}</h2>
               <button class="my-btn-grey text-uppercase rounded-pill">
                 learn more
@@ -149,13 +151,26 @@ section.courses {
   div.course-name-info {
     h2 {
       color: $secondaryColor;
-      font-size: 1.6rem;
+      font-size: 1.4rem;
       font-weight: 600;
     }
     button {
       font-size: 0.7rem;
     }
   }
+    div.wrapper-img {
+        overflow: hidden;
+        max-height: 190px;
+        margin-bottom: 1rem;
+        // cursor: pointer;
+        img {
+          transition: all ease-in-out 0.8s;
+          &:hover {
+            transform: scale(1.08);
+            opacity: 0.9;
+          }
+        }
+      }
 }
 
 section.statistics {

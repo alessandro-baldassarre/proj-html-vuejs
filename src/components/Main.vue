@@ -109,11 +109,14 @@
               <div class="container">
                 <div class="row">
                   <div class="col-6 mb-5">
-                    <img
-                      src="../assets/images/blog-choosecar-700x441.jpg"
-                      alt=""
-                      class="img-fluid"
-                    />
+                    <div class="wrapper-img">
+                      <img
+                        src="../assets/images/blog-choosecar-700x441.jpg"
+                        alt=""
+                        class="img-fluid"
+                      />
+                    </div>
+
                     <h5>What Car to Start With?</h5>
                     <p class="date">
                       February 7th, 2019 |
@@ -122,11 +125,14 @@
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing</p>
                   </div>
                   <div class="col-6 mb-5">
-                    <img
-                      src="../assets/images/blogpost-10and2-700x441.jpg"
-                      alt=""
-                      class="img-fluid"
-                    />
+                    <div class="wrapper-img">
+                      <img
+                        src="../assets/images/blogpost-10and2-700x441.jpg"
+                        alt=""
+                        class="img-fluid"
+                      />
+                    </div>
+
                     <h5>Avada Driving School Expanding</h5>
                     <p class="date">
                       February 7th, 2019 |
@@ -160,10 +166,15 @@
           <div class="col-6 text-center p-5">
             <h1>Sign up to our Newsletter</h1>
             <input type="text" class="w-100 newsletter rounded" />
-            <button class="my-btn text-uppercase text-white rounded-pill w-100 mb-4">
+            <button
+              class="my-btn text-uppercase text-white rounded-pill w-100 mb-4"
+            >
               subscribe
             </button>
-            <p>(We do not share your data with anybody, and only use it for its intended purpose)</p>
+            <p>
+              (We do not share your data with anybody, and only use it for its
+              intended purpose)
+            </p>
           </div>
         </div>
       </div>
@@ -299,6 +310,19 @@ main {
         font-size: 2.3;
         margin-bottom: 3.5rem;
       }
+      div.wrapper-img {
+        overflow: hidden;
+        max-height: 305px;
+        margin-bottom: 1rem;
+        cursor: pointer;
+        img {
+          transition: all ease-in-out 0.8s;
+          &:hover {
+            transform: scale(1.08);
+            opacity: 0.9;
+          }
+        }
+      }
     }
     img {
       bottom: 2.5rem;
@@ -337,9 +361,9 @@ main {
       border: 1px solid lightgray;
       margin-bottom: 2rem;
     }
-    p{
+    p {
       color: $lightGreyColor;
-      font-size: .8rem;
+      font-size: 0.8rem;
     }
   }
 }
