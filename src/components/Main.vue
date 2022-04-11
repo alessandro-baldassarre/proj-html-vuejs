@@ -20,14 +20,14 @@
     <section class="intro">
       <div class="container px-5 h-100">
         <div class="row px-5 h-100">
-          <div class="col-6 h-100 pt-4 intro-text">
-            <h1 v-scrollanimation class="my-5">Get Behind The Wheel</h1>
-            <h5 v-scrollanimation>
+          <div v-scrollanimation class="col-6 h-100 pt-4 intro-text">
+            <h1  class="my-5">Get Behind The Wheel</h1>
+            <h5 >
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc
               ultrices auctor sapien id cursus. Aliquam maximus turpis in
               vehicula semper.
             </h5>
-            <p v-scrollanimation>
+            <p >
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc
               ultrices auctor sapien id cursus. Aliquam maximus turpis in
               vehicula semper. Fusce et ultrices libero, at suscipit lacus. Sed
@@ -244,13 +244,7 @@ main {
   // INTRO
   section.intro {
     height: 675px;
-    div.intro-text {
-      h1 {
-        color: $greyTitlesColor;
-        font-weight: 700;
-        font-size: 2.3;
-      }
-      .before-enter {
+    .before-enter {
         opacity: 0;
         transform: translatex(-100px);
         transition: all 1.5s ease-out;
@@ -259,6 +253,13 @@ main {
         opacity: 1;
         transform: translatex(0px);
       }
+    div.intro-text {
+      h1 {
+        color: $greyTitlesColor;
+        font-weight: 700;
+        font-size: 2.3;
+      }
+      
       h5 {
         color: $lightGreyColor;
         font-size: 1.3rem;
