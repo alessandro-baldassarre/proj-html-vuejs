@@ -1,4 +1,8 @@
-# proj-html-vuejs
+# Wordpress Theme Clone
+
+
+Wordpress theme replication using HTML 5, CSS 3, JS ES6 (Vue.js)
+
 
 ## Project setup
 ```
@@ -10,15 +14,10 @@ npm install
 npm run serve
 ```
 
-### Compiles and minifies for production
-```
-npm run build
-```
+## Screenshots
 
-### Lints and fixes files
-```
-npm run lint
-```
+![App Screenshot](https://i.ibb.co/6mMDcLM/Schermata-2022-06-06-alle-18-39-25.png)
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+
+![App Screenshot](https://i.ibb.co/W2fVzng/Schermata-2022-06-06-alle-18-40-01.png)
+
